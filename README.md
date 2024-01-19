@@ -1,7 +1,7 @@
 # Virtualizacion
-Rafael Alvarez 1018419 <br> 
+Rafael Alvarez 1018419 </br>
 
-Carlos Vargas  1125417 <br> 
+Carlos Vargas  1125417 </br> 
 
-María Caneses  1187820 <br> 
+María Caneses  1187820 </br> 
 
