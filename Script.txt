@@ -1,0 +1,58 @@
+const REACT_APP_API_ENDPOINT = 'https://www.randomnumberapi.com/api/v1.0';
+const spEndpoints = {
+  getNumber: 'random?min=100&max=1000&count=1',
+};
+
+const fetchData = async (endpoint) => {
+  try {
+    const response = await axios.get(${REACT_APP_API_ENDPOINT}/${endpoint});
+    return response.data.key; 
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
+const getRandomNumber = async () => {
+  try {
+    const randomNumberData = await fetchData(spEndpoints.getNumber);
+    console.log(randomNumberData);  
+    setNumber(randomNumberData);
+  } catch (error) {
+    console.error("Error in getRandomNumber:", error);
+  }
+};
+
+// Llamada a la función para obtener el número aleatorio
+getRandomNumber();
+
+
+
+
+python 
+
+import requests
+
+def obtener_numero_aleatorio():
+    url = "http://www.randomnumberapi.com/api/v1.0/random?min=100&max=1000&count=1"
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        numero_aleatorio = response.json()[0]
+        return numero_aleatorio
+    else:
+        print(f"Error al obtener el número aleatorio. Código de estado: {response.status_code}")
+        return None
+
+def generar_nombres_con_numero_aleatorio():
+    numero_aleatorio = obtener_numero_aleatorio()
+    
+    if numero_aleatorio is not None:
+        # Generar nombres con el número aleatorio
+        nombres = ["Rafael", "Maria Fernanda", "Carlos", str(numero_aleatorio)]
+        
+        print("Nombres generados:")
+        for nombre in nombres:
+            print(nombre)
+
+generar_nombres_con_numero_aleatorio()
