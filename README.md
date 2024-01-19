@@ -1,7 +1,7 @@
 # Virtualizacion
-Rafael Alvarez 1018419 
-Carlos Vargas  1125417
-María Caneses  1187820
+Rafael Alvarez 1018419 __
+Carlos Vargas  1125417 __
+María Caneses  1187820 __
 <br> 
 const fetchData = async (endpoint) => {
     try {
